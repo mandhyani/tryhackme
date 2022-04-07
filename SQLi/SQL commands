@@ -2,8 +2,29 @@ select -- used to retrieve data from a database.
 * --> tells the database we want to retrieve back all columns from the table.
 limit 1,1 -- the first arg tells sql to skip the number of results and the second tells how many results to include.
 
+-- all sql queries end with ;
+
+insert -- tells the database to insert new row into the database.
+update -- tells the database to update an existing row in the database.
+delete -- tells the database to delete a row in the database.
+
+the delete command should be used carefully. if used recklessly can lead to deletion of the whole table.
+example -- delete from users;
+
+
+
+operators
+
+= != or and % union
+
 example of sql query
 
 select * from users where username='admin';
-
--- all sql queries end with ;
+select * from users where username != 'admin';
+select * from users where username='admin' or username='jon';
+select * from users where username='admin' and password='p4ssword';
+select * from users where username like 'a%';
+select * from users where username like '%n';
+SELECT name,address,city,postcode from customers UNION SELECT company,address,city,postcode from suppliers;
+insert into users (username,password) values ('bob','password123');
+update users SET username='root',password='pass123' where username='admin';
