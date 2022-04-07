@@ -1,0 +1,15 @@
+It's the easiest to detect and exploit
+
+In-Band just refers to the same method of communication being used to exploit the vulnerability and also recieve the results.
+
+example discovering a SQL injection vulnerability on a website page and then being able to extract data from the database to the same page.
+
+subsets of In-Band SQLi
+
+-- Error-Based SQLi
+When the error messages are returned to the webpages this becomes fairly easy to exploit the whole database.
+this type of injection is then called error-based SQLi
+
+-- Union-Based SQLi
+this type of injection utilises the SQL union operator along side SELECT statement to return additional results to the page.
+The method is the most common way of extracting large amounts of data via an SQLo vulneranility.

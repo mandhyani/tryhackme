@@ -7,6 +7,11 @@ limit 1,1 -- the first arg tells sql to skip the number of results and the secon
 insert -- tells the database to insert new row into the database.
 update -- tells the database to update an existing row in the database.
 delete -- tells the database to delete a row in the database.
+database() -- returns the name of the database.
+group_concat() -- gets the specific column from multiple returned rows and puts it into one string seprated by commas.
+infotmation_schema database -- every user of the database has access to this, it contains information about all the databases and tables the user has access to.
+
+
 
 the delete command should be used carefully. if used recklessly can lead to deletion of the whole table.
 example -- delete from users;
@@ -28,3 +33,15 @@ select * from users where username like '%n';
 SELECT name,address,city,postcode from customers UNION SELECT company,address,city,postcode from suppliers;
 insert into users (username,password) values ('bob','password123');
 update users SET username='root',password='pass123' where username='admin';
+
+Types of SQLi
+
+In-band SQLi
+Blind SQLi
+Out of band SQLi
+
+
+Union-Based SQLi--
+
+0 UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables WHERE table_schema = 'sqli_one'
+-- In the above query we're intrested in listing all the tables in the sqli_one database, which is article and staff_users
