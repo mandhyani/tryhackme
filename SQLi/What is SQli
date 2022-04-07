@@ -1,0 +1,1 @@
+The point wherein a web application using SQL can turn into SQLi when user-provided data gets included in the SQL query.
