@@ -1,3 +1,6 @@
+visit https://cloud.google.com/bigquery/docs/information-schema-tables for information_schema.
+
+
 select -- used to retrieve data from a database.
 * --> tells the database we want to retrieve back all columns from the table.
 limit 1,1 -- the first arg tells sql to skip the number of results and the second tells how many results to include.
