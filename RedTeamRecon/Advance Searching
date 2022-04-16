@@ -1,0 +1,24 @@
+There are various techniques to refine google searches while doing passive recon.
+Googledorking is a valuable skill
+
+
+"<search phrase>"
+filetype:pdf
+site:tesla.com
+-site:tesla.com (dont include tesla.com in results.)
+intitle:salary
+inurl:admin
+
+Search engines crawl the world wide web day and night to index new web pages and files. Sometimes this can lead to indexing confidential information. Examples of confidential information include:
+
+Documents for internal company use
+Confidential spreadsheets with usernames, email addresses, and even passwords
+Files containing usernames
+Sensitive directories
+Service version number (some of which might be vulnerable and unpatched)
+Error messages
+
+https://www.exploit-db.com/
+has some great info on Googledorking
+
+complete - https://tryhackme.com/room/googledorking

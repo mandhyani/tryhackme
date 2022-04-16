@@ -1,0 +1,11 @@
+There's two kind of recon you can do.
+
+- Passive -- simply you don't interact with the target in this recon
+it can be simply utilising OSINT to view publically available knowledge.
+
+ tools - nslookup, dig , tracert/traceroute , host , whois.
+
+ - Active -- Involves sending packets to the target and monitoring its response or a lack of it.
+ eg using NMAP
+
+  
