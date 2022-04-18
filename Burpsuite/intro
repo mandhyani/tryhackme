@@ -1,0 +1,27 @@
+Simply put Burp is one stop shop for web and mobile application penetration testing.
+Its the industry standard for Pen-testing.
+
+There are 3 varieties
+
+BurpSuite Professional
+BurpSuite Enterprise
+BurpSuite Community (Free)
+
+
+
+ Various features in Burp
+
+ Proxy. -- It helps intercept and modify requests/responses when interacting with web apps
+ Repeater -- Allows us to capture modify then resent the same request numerous
+ times This can help craft a payload in SQLi attacks for trial and Enterprise
+
+ Intruder -- Spray endpoints with requests. used to bruteforce/fuzz endpoints
+
+ Decoder -- Helps encoding/decoding data prior sending it .
+
+ Comparer -- Compare two pieces of data at either word or byte level.
+ Again this is not something unique to Burp
+
+ Sequencer -- Can be used to assess randomness in data such as session cookie values or other supposedly
+ random data generated. If the algo is not generating secure random values, then this could
+ open up some devastating avenues for attacks

