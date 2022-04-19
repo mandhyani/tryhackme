@@ -1,0 +1,10 @@
+Basic active recon
+
+Ping traceroute telnet
+netcat or nc
+
+
+netcat
+works on both TCP and UDP
+
+nc -vnlp 1234

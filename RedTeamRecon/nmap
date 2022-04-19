@@ -1,0 +1,65 @@
+man nmap for everything
+
+default parameters do a port scan on active machines
+
+local networks use arp for default discovery provided a priviliged users
+remote networks are scanned with ping echo request and TCP ack to 80 and 443
+unprivilidged users can use TCP 3 way handshakes for outside network
+
+to silent scan
+
+namp -sn <target> (no port scans)
+nmap -PE -sn <IP> ICMP echo type 8
+nmap -PP -sn <IP> ICMP timestamp tyoe 14
+nmap -PS -sn MACHINE_IP/24 TCP syn-rst Scan
+sudo nmap -PA -sn MACHINE_IP/24 Ack Ping
+ sudo nmap -PU -sn TARGET
+Finally, we can use UDP to discover if the host is online.
+Contrary to TCP SYN ping, sending a UDP packet to an open port is not
+expected to lead to any reply. However, if we send a UDP packet to
+a closed UDP port, we expect to get an ICMP port unreachable packet;
+this indicates that the target system is up and available.
+
+-sS -- Syn scan syn-syn/ack-rst
+-sT tcp connect scan
+
+
+TCP Connect scans
+nmap -sT MACHINE_IP
+
+
+
+-n
+ Nmap to issue a reverse DNS lookup for all the possibles hosts on a subnet,
+ hoping to get some insights from the names --> -R
+
+you can control probing parallelization using --min-parallelism
+<numprobes> and --max-parallelism <numprobes>. Nmap probes the targets
+to discover which hosts are live and which ports are open; probing
+parallelization specifies the number of such probes that can be run
+in parallel. For instance, --min-parallelism=512 pushes Nmap to maintain
+at least 512 probes in parallel; these 512 probes are related to host
+ discovery and open ports.
+
+
+NULL scan
+nmap -sN TARGET
+open port don't reply to NULL scans
+closed ports sent a rst
+
+
+FIN scan
+Open ports dont reply
+Closed ports send a rst
+
+Xmas scan
+Flags -- FIN,PSH,URG
+-sX
+nmap -sX target
+Open ports -- no reply
+Closed ports -- Rst.Ack
+
+
+
+MASSCAN
+apt install MASSCAN
