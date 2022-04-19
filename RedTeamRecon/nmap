@@ -40,12 +40,17 @@ parallelization specifies the number of such probes that can be run
 in parallel. For instance, --min-parallelism=512 pushes Nmap to maintain
 at least 512 probes in parallel; these 512 probes are related to host
  discovery and open ports.
-
-
+--------------------------------------------------------------------------------------------------------------------------------
+Advance Nmap Scans
+--------------------------------------------------------------------------------------------------------------------------------
 NULL scan
 nmap -sN TARGET
 open port don't reply to NULL scans
 closed ports sent a rst
+
+Window Scan
+nmap -sW TARGET
+
 
 
 FIN scan
@@ -59,7 +64,33 @@ nmap -sX target
 Open ports -- no reply
 Closed ports -- Rst.Ack
 
+TCP ACK SCAN
+nmap -sA TARGET
 
+
+Maimon
+-sM
 
 MASSCAN
 apt install MASSCAN
+
+SPOOFING IP
+Only of benefit if we can route the resopnse to ourselves.
+this scan will be useless if the attacker system cannot monitor the network for responses.
+
+nmap -D 10.10.0.1,10.10.0.2,RND,RND,ME 10.10.209.196
+
+IP Packet fragmentation
+
+-F 8 bytes frags
+-FF 16 byte frags
+can set max mss
+
+
+Zombie Scans
+
+-sI
+
+
+--reason for more details
+-v -vv -d -dd debugs
