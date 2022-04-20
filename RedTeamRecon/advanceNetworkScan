@@ -1,0 +1,16 @@
+Nmap OS detection
+Nmap needs to find at least one open and one closed port on the target to make a reliable guess. Furthermore, the guest
+OS fingerprints might get distorted due to the rising use of virtualization and similar technologies. Therefore, always take
+the OS version with a grain of salt.
+
+The -O (capital letter O) helps detect OS.
+
+
+Nmap scripting engine
+A part of Nmap, Nmap Scripting Engine (NSE) is a Lua interpreter that allows Nmap to execute Nmap scripts written
+in Lua language. However, we don’t need to learn Lua to make use of Nmap scripts.
+
+find scrips in /usr/share/nmap/scripts
+
+--script=default or -sC to use the default scripts
+Worth exploring all
