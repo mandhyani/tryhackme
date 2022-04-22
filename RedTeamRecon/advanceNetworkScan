@@ -14,3 +14,10 @@ find scrips in /usr/share/nmap/scripts
 
 --script=default or -sC to use the default scripts
 Worth exploring all
+
+SAVING MEANINGFUL OUTPUTS
+
+Normal Format --> -oN FILENAME
+Grepable Format --> -oG
+XML Format --> -oX
+Script Kidde (LOL) --> -oS
