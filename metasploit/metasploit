@@ -1,0 +1,25 @@
+Main components of metasploit
+
+-- msfconsole
+--  Exploit, Vulnerability , Payload
+--help set
+--history
+--show options
+-- back
+search type:auxiliary telnet
+
+metasploit database
+systemclt start postgresql
+msfdb init
+msfconsole
+db_status
+workspace
+workspace -a tryhackme
+workspace -h
+workspace <name>
+db_nmap
+
+search type:exploit platform:windows
+type:post
+type:enum
+type:aux
