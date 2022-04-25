@@ -1,0 +1,8 @@
+we can force the remote server to either send us command line access to the server
+(a reverse shell), or to open up a port on the server which we can connect to in
+ order to execute further commands (a bind shell).
+
+
+https://web.archive.org/web/20200901140719/http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+https://github.com/swisskyrepo/PayloadsAllTheThings
+https://github.com/danielmiessler/SecLists
