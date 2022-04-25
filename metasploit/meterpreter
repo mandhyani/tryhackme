@@ -1,0 +1,34 @@
+Meterpreter is a metasploit payload that supports penetration testing
+It runs on target system and act as agent within a CnC architecture.
+
+Most antivirus will detect it.
+
+ msfvenom -l payloads | grep Meterpreter
+
+ available on various platforms.
+
+ -- Android
+ -- Apple IOS
+ -- Java
+ -- Linux
+ -- OSX
+ -- PHP
+ -- Python
+ -- Windows
+
+ meterpreter > help
+
+ getuid
+ migrate -- be careful to migrate. you can jump into a process with lower rights
+ and lose System/root rights
+
+ Hashdump
+ serach
+ shell
+
+
+ search -f *.txt search -f secrets.txt
+
+ lsass
+
+ https://crackstation.net/
