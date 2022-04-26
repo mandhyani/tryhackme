@@ -32,3 +32,5 @@ Most antivirus will detect it.
  lsass
 
  https://crackstation.net/
+
+ find . -perm /4000 

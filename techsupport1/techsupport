@@ -27,3 +27,13 @@ sudo -l -- see sudo permissions
 
 
 https://gtfobins.github.io/gtfobins/iconv/#sudo
+
+
+shell stableise
+
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+export TERM=xterm-256color
+CTRL+Z
+stty -echo raw
+fg
+stty rows 41 columns 166
